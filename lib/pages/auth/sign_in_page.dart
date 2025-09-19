@@ -36,8 +36,8 @@ class _SignInPageState extends State<SignInPage> {
                   decoration: const BoxDecoration(
                     gradient: LinearGradient(
                       colors: [
-                        Color(0xFFF72585), // vibrant pink
-                        Color(0xFF3A0CA3), // deep purple
+                        Color(0xFFD000FF), // vibrant pink
+                        Color(0xEC613BAC), // deep purple
                       ],
                       begin: Alignment.centerLeft,
                       end: Alignment.centerRight,
@@ -48,7 +48,7 @@ class _SignInPageState extends State<SignInPage> {
                     ),
                   ),
                   child: Text(
-                    '🛍️ Thrift Store',
+                    '🛍️ Preloved Picks Store',
                     textAlign: TextAlign.center,
                     style: GoogleFonts.montserrat(
                       fontSize: 32,
@@ -71,7 +71,8 @@ class _SignInPageState extends State<SignInPage> {
                         TextField(
                           controller: _emailCtrl,
                           decoration: InputDecoration(
-                            prefixIcon: const Icon(Icons.email, color: Color(0xFF3A0CA3)),
+                            prefixIcon: const Icon(Icons.email, color: Color(
+                                0xFF9129A1)),
                             labelText: 'Email',
                             labelStyle: GoogleFonts.montserrat(color: Colors.grey[600]),
                             filled: true,
@@ -87,7 +88,8 @@ class _SignInPageState extends State<SignInPage> {
                         TextField(
                           controller: _passCtrl,
                           decoration: InputDecoration(
-                            prefixIcon: const Icon(Icons.lock, color: Color(0xFF3A0CA3)),
+                            prefixIcon: const Icon(Icons.lock, color: Color(
+                                0xFF611060)),
                             labelText: 'Password',
                             labelStyle: GoogleFonts.montserrat(color: Colors.grey[600]),
                             filled: true,
@@ -105,7 +107,7 @@ class _SignInPageState extends State<SignInPage> {
                           height: 50,
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: const Color(0xFFF72585),
+                              backgroundColor: const Color(0xB5F025F7),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(12),
                               ),
@@ -151,7 +153,7 @@ class _SignInPageState extends State<SignInPage> {
                           child: Text(
                             'Don’t have an account? Sign Up',
                             style: GoogleFonts.montserrat(
-                              color: const Color(0xFF3A0CA3),
+                              color: const Color(0xE5200CA3),
                             ),
                           ),
                         ),

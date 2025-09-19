@@ -68,7 +68,7 @@ class AddItemPageState extends State<AddItemPage> {
     return Container(
       decoration: const BoxDecoration(
         gradient: LinearGradient(
-          colors: [Color(0xFF7209B7), Color(0xFFFF006E)],
+          colors: [Color(0xFF7F00FF), Color(0xFFE100FF)],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
         ),
@@ -79,12 +79,15 @@ class AddItemPageState extends State<AddItemPage> {
         extendBody: true,
 
         appBar: AppBar(
-          backgroundColor: Colors.transparent,
-          elevation: 0,
+          backgroundColor: Colors.deepPurple.withOpacity(0.9),
+          elevation: 6,
           title: Text(
-            '✨ Add Your Thrift',
-            style: GoogleFonts.poppins(
-                fontSize: 22, fontWeight: FontWeight.bold, color: Colors.white),
+            '🛍 Add Your Thrift',
+            style: GoogleFonts.lato(
+              fontSize: 26,
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+            ),
           ),
           centerTitle: true,
         ),
@@ -96,7 +99,7 @@ class AddItemPageState extends State<AddItemPage> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                // Title field
+
                 CustomInputField(
                   controller: _titleCtrl,
                   label: 'Item Title',
@@ -104,7 +107,7 @@ class AddItemPageState extends State<AddItemPage> {
                 ),
                 const SizedBox(height: 16),
 
-                // Description
+
                 CustomInputField(
                   controller: _descCtrl,
                   label: 'Description',
@@ -113,7 +116,7 @@ class AddItemPageState extends State<AddItemPage> {
                 ),
                 const SizedBox(height: 16),
 
-                // Price
+
                 CustomInputField(
                   controller: _priceCtrl,
                   label: 'Price (Php)',
@@ -122,7 +125,7 @@ class AddItemPageState extends State<AddItemPage> {
                 ),
                 const SizedBox(height: 16),
 
-                // Name
+
                 CustomInputField(
                   controller: _nameCtrl,
                   label: 'Your Display Name',
@@ -130,7 +133,7 @@ class AddItemPageState extends State<AddItemPage> {
                 ),
                 const SizedBox(height: 16),
 
-                // Contact
+
                 CustomInputField(
                   controller: _contactCtrl,
                   label: 'Contact Email',
@@ -138,17 +141,19 @@ class AddItemPageState extends State<AddItemPage> {
                 ),
                 const SizedBox(height: 24),
 
-                // Image picker
+
                 _image == null
                     ? ElevatedButton.icon(
-                  icon: const Icon(Icons.photo_library, size: 24),
+                  icon: const Icon(Icons.photo_library, size: 24, color: Colors.white),
                   label: Text(
                     'Choose Photo',
-                    style: GoogleFonts.poppins(fontWeight: FontWeight.w600),
+                    style: GoogleFonts.lato(
+                      fontWeight: FontWeight.w600,
+                      color: Colors.white,
+                    ),
                   ),
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.white.withOpacity(0.9),
-                    foregroundColor: Colors.deepPurple,
+                    backgroundColor: Colors.pinkAccent,
                     padding: const EdgeInsets.symmetric(vertical: 14),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12),
@@ -167,7 +172,7 @@ class AddItemPageState extends State<AddItemPage> {
                       onPressed: () => setState(() => _image = null),
                       child: Text(
                         'Re-pick Image',
-                        style: GoogleFonts.poppins(color: Colors.white70),
+                        style: GoogleFonts.lato(color: Colors.yellowAccent),
                       ),
                     ),
                   ],
@@ -175,28 +180,31 @@ class AddItemPageState extends State<AddItemPage> {
 
                 const SizedBox(height: 24),
 
-                // Upload button
+
                 ElevatedButton(
                   onPressed: canUpload ? _handleUpload : null,
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.white,
-                    foregroundColor: Colors.deepPurple,
+                    backgroundColor: Colors.amber,
+                    foregroundColor: Colors.black,
                     padding: const EdgeInsets.symmetric(vertical: 16),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(14),
                     ),
-                    elevation: 6,
+                    elevation: 8,
                   ),
                   child: _uploading
                       ? const SizedBox(
                     width: 24,
                     height: 24,
-                    child: CircularProgressIndicator(strokeWidth: 2),
+                    child: CircularProgressIndicator(
+                      strokeWidth: 2,
+                      valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
+                    ),
                   )
                       : Text(
                     'Upload Item',
-                    style: GoogleFonts.poppins(
-                      fontSize: 16,
+                    style: GoogleFonts.lato(
+                      fontSize: 22,
                       fontWeight: FontWeight.bold,
                     ),
                   ),

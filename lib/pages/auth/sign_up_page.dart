@@ -37,8 +37,8 @@ class _SignUpPageState extends State<SignUpPage> {
                   decoration: const BoxDecoration(
                     gradient: LinearGradient(
                       colors: [
-                        Color(0xFFF72585),
-                        Color(0xFF3A0CA3),
+                        Color(0xECF7258E),
+                        Color(0xFF0C76A3),
                       ],
                       begin: Alignment.centerLeft,
                       end: Alignment.centerRight,
@@ -73,7 +73,8 @@ class _SignUpPageState extends State<SignUpPage> {
                         TextField(
                           controller: _nameCtrl,
                           decoration: InputDecoration(
-                            prefixIcon: const Icon(Icons.person, color: Color(0xFF3A0CA3)),
+                            prefixIcon: const Icon(Icons.person, color: Color(
+                                0xD83A0CA3)),
                             labelText: 'Name',
                             labelStyle: GoogleFonts.montserrat(color: Colors.grey[600]),
                             filled: true,
@@ -89,7 +90,8 @@ class _SignUpPageState extends State<SignUpPage> {
                         TextField(
                           controller: _emailCtrl,
                           decoration: InputDecoration(
-                            prefixIcon: const Icon(Icons.email, color: Color(0xFF3A0CA3)),
+                            prefixIcon: const Icon(Icons.email, color: Color(
+                                0x940CA380)),
                             labelText: 'Email',
                             labelStyle: GoogleFonts.montserrat(color: Colors.grey[600]),
                             filled: true,
@@ -106,7 +108,8 @@ class _SignUpPageState extends State<SignUpPage> {
                         TextField(
                           controller: _passCtrl,
                           decoration: InputDecoration(
-                            prefixIcon: const Icon(Icons.lock, color: Color(0xFF3A0CA3)),
+                            prefixIcon: const Icon(Icons.lock, color: Color(
+                                0xFF6742C6)),
                             labelText: 'Password',
                             labelStyle: GoogleFonts.montserrat(color: Colors.grey[600]),
                             filled: true,
@@ -125,7 +128,7 @@ class _SignUpPageState extends State<SignUpPage> {
                           height: 50,
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: const Color(0xFF3A0CA3),
+                              backgroundColor: const Color(0xFFA30CA0),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(12),
                               ),
@@ -188,7 +191,7 @@ class _SignUpPageState extends State<SignUpPage> {
                   onPressed: () => Navigator.pushNamed(context, '/signin'),
                   child: Text(
                     'Already have an account? Sign In',
-                    style: GoogleFonts.montserrat(color: const Color(0xFF3A0CA3)),
+                    style: GoogleFonts.montserrat(color: const Color(0xE7A30C5D)),
                   ),
                 ),
               ],
